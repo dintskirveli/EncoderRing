@@ -5,3 +5,12 @@ v0.2
 -tab switcher implented. one tab for password generator, one for list of generated passwords (currently just a dummy tab)
 v0.1 
 -initial commit. have password generator based on time
+
+
+to do:
+-if password does not exist, create one in internal storage. 
+-add a button to encoder tab to save the password to internal storage
+-in PasswordList tab, add listview that will be populated by passwords stored in internal storage
+refer to http://developer.android.com/guide/topics/data/data-storage.html "Using the Internal Storage"
+
+
