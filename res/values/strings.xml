@@ -4,5 +4,7 @@
     <string name="label1">Input Simple Password</string>
     <string name="label2">Complex Output</string>
     <string name="labelbuttonConvert">Convert</string>
+    <string name="labelButtonPassword">Enter Password</string>
+    <string name="passwordLabel">Enter your password</string>
 
 </resources>
