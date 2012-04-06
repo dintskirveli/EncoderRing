@@ -1,0 +1,7 @@
+changelog:
+v0.3
+-basic password screen, password is currently "awesome". will implement abilitiy to create password on next commit
+v0.2
+-tab switcher implented. one tab for password generator, one for list of generated passwords (currently just a dummy tab)
+v0.1 
+-initial commit. have password generator based on time
