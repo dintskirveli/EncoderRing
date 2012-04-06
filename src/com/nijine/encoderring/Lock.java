@@ -21,6 +21,7 @@ private EditText password;
     public void checkPassword(View view) {
     	String input = password.getText().toString();
     	if (input.equals("awesome")) {
+    		password.setText("");
     		Intent myIntent = new Intent(Lock.this, TabWidget.class);
     		Lock.this.startActivity(myIntent);
     	}
