@@ -1,0 +1,8 @@
+After you change some files,
+do a git status- things in red will not be commited.
+git add "filename" all the things that you want to commit (files you changed or added)
+git remove if you want to get rid of a file
+git status again to make sure all the changes you want to make are green
+then git commit -m "your message here"
+and finally, git push
+before you start coding, git pull to update your local files to the latest ones from the git repo
