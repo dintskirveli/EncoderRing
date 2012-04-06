@@ -17,6 +17,16 @@ private EditText password;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lock);
         password = (EditText)findViewById(R.id.password);
+        
+/* if password exists
+ * create one edittextview
+ * create one button, set onclikc to checkppassword
+ * 
+ * if password doesnt exist
+ * create two edittextviews
+ * create one button, onclick compares the two strings and sets the password if they are equal
+ * 
+ */
     }
     public void checkPassword(View view) {
     	String input = password.getText().toString();

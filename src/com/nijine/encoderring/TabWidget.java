@@ -4,6 +4,7 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.TabHost;
 
 public class TabWidget extends TabActivity {
@@ -30,5 +31,13 @@ public class TabWidget extends TabActivity {
 	    tabHost.addTab(spec);
 
 	    tabHost.setCurrentTab(2);
+	}
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if (keyCode == KeyEvent.KEYCODE_BACK) {
+	        finish();
+	        return true;
+	    }
+	    return super.onKeyDown(keyCode, event);
 	}
 }
