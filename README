@@ -1,9 +1,13 @@
+Dangerous Duo, lol
+
 changelog:
-v0.3
+v0.3.1 - DI
+-now able to create new lock password if one doesnt exist, and use that password to unlock the app. Also set nohistory in xml to not log the app in activity stack for better security
+v0.3 - DI
 -basic password screen, password is currently "awesome". will implement abilitiy to create password on next commit
-v0.2
+v0.2 - DI
 -tab switcher implented. one tab for password generator, one for list of generated passwords (currently just a dummy tab)
-v0.1 
+v0.1 - DL
 -initial commit. have password generator based on time
 
 
