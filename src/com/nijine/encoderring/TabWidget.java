@@ -32,13 +32,4 @@ public class TabWidget extends TabActivity {
 
 	    tabHost.setCurrentTab(2);
 	}
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-	    if (keyCode == KeyEvent.KEYCODE_HOME) {
-	    	Intent myIntent = new Intent(TabWidget.this, Lock.class);
-	    	TabWidget.this.startActivity(myIntent);
-	        return true;
-	    }
-	    return super.onKeyDown(keyCode, event);
-	}
 }
