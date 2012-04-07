@@ -1,5 +1,7 @@
 Dangerous Duo, lol
 
+NOTE: I added a gitignore file, which should make your git not care about your bin, gen and settings folders. if, after a git status, only things you want to commit are red, you can simple git commit -a -m "your message here" and avoid having to git add each changed file.
+
 changelog:
 v0.3.1 - DI
 -now able to create new lock password if one doesnt exist, and use that password to unlock the app. Also set nohistory in xml to not log the app in activity stack for better security
