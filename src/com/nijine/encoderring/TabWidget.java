@@ -34,8 +34,9 @@ public class TabWidget extends TabActivity {
 	}
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-	    if (keyCode == KeyEvent.KEYCODE_BACK) {
-	        finish();//moveTaskToBack(true)
+	    if (keyCode == KeyEvent.KEYCODE_HOME) {
+	    	Intent myIntent = new Intent(TabWidget.this, Lock.class);
+	    	TabWidget.this.startActivity(myIntent);
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);

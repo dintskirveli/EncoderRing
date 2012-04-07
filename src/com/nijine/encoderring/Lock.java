@@ -11,6 +11,7 @@ import java.io.IOException;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +32,9 @@ String stored;
         super.onCreate(savedInstanceState);
         
         LinearLayout lock = new LinearLayout(this);
+        lock.setOrientation(lock.VERTICAL);
         
+        PasswordTransformationMethod transMode = new PasswordTransformationMethod();
         try {
         	passwordEditText = new EditText(this);
         	DataInputStream in = new DataInputStream(openFileInput(FILE_NAME));
@@ -39,12 +42,14 @@ String stored;
 			in.close();
 			Log.d("Stored password", stored);
 			Button unlockButton = new Button(this);
+			unlockButton.setText("Unlock");
 			unlockButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 					String one = passwordEditText.getText().toString();
 					checkPassword(stored, one);
 				}
 	        });
+			passwordEditText.setTransformationMethod(transMode);
 			lock.addView(passwordEditText);
 			lock.addView(unlockButton);
 			
@@ -52,6 +57,7 @@ String stored;
 			newPasswordEditText = new EditText(this);
 			confirmNewPasswordEditText = new EditText(this);
 			Button newPasswordButton = new Button(this);	
+			newPasswordButton.setText("Save Password");
 			newPasswordButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 					String one = newPasswordEditText.getText().toString();
@@ -74,6 +80,8 @@ String stored;
 					}
 				}
 	        });
+			newPasswordEditText.setTransformationMethod(transMode);
+			confirmNewPasswordEditText.setTransformationMethod(transMode);
 			lock.addView(newPasswordEditText);
 			lock.addView(confirmNewPasswordEditText);
 			lock.addView(newPasswordButton);
