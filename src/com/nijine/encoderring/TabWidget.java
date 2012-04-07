@@ -35,7 +35,7 @@ public class TabWidget extends TabActivity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 	    if (keyCode == KeyEvent.KEYCODE_BACK) {
-	        finish();
+	        finish();//moveTaskToBack(true)
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);
